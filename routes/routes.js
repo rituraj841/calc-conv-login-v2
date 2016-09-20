@@ -13,7 +13,7 @@ module.exports.authHandler = function(req, res){
 	var reqname = req.body.nm;
 	var reqPassword = req.body.pwd;
 	console.log("Inside loginHandler reqEmail=%s  reqPassword=%s", reqname, reqPassword);
-	if ((reqname === 'golu')  && (reqPassword === 'g')){
+	if (((reqname === 'golu')  && (reqPassword === 'g'))  || ((reqname === 'joey')  && (reqPassword === 'j')) ){
 		req.session.username = reqname;
 		res.render("index-page.handlebars", {username: req.session.username});
 	}else{
