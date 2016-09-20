@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>includeHead}}
+<body>
+{{>includeMenu}}
+<div class="container">
+  <div class="jumbotron">
+     <h3>CALCULATOR </h3>
+     <h5><code>Hi {{username}}!</code></h5>
+     <form method="post" action="/calc-result">
+          <label for="num1">No.1 :</label>
+          <input type="number" required class="form-control input-lg" name="nm1" placeholder="Enter the first Number" />
+
+          <label for="num2">No.2 :</label>     
+            <input type="number" required class="form-control input-lg" name="nm2" placeholder="Enter the first Number" />
+                
+          <label for="num1">Select Operator :</label>     
+            <select  required class="form-control" name="operator">
+                  <option value="+">Add</option>
+                  <option value="-">Subtract</option>
+                  <option value="*">Multiply</option>
+                  <option value="div">Divide</option>
+            </select>
+
+            <BR/>    
+            <input type="submit" class="btn btn-primary btn-lg"/>
+            <BR/>
+      </form>  
+  </div>
+  </div>
+  {{>includeFoot}}
+  </body>
+  </html>

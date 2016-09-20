@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>includeHead}}
+<body>
+{{>includeMenu}}
+<div class="container">
+  <div class="jumbotron">
+     <h3>CONVERSION </h3>
+     <h5><code>Hi {{username}}!</code></h5>
+     <form method="post" action="/conv-result">
+           <label for="num">Coolie No.1 :</label>
+           <input type="number" required class="form-control input-lg" name="num" placeholder="Enter the Number" />
+          
+           <label for="num1">Select Unit :</label>     
+            <select  required class="form-control" name="operator">
+                  <option value="cm2m">Cm to M</option>
+                  <option value="ft2m">Ft to M</option>
+                  <option value="ft2in">Ft to Inch</option>
+                  <option value="mt2in">Meter To Inch</option>
+            </select>
+            <BR/>    
+            <input type="submit" class="btn btn-primary btn-lg"/>
+            <BR/>
+      </form>  
+  </div>
+</div>
+{{>includeFoot}}
+</body>
+</html>
